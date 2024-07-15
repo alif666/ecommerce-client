@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-const ImageCarousal = ({items}) => {
+const ImageCarousal = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-//   const items = [
-//     { path: '/Logo_Dark.png', alt: 'Slide 1' },
-//     { path: '/Logo.png', alt: 'Slide 2' },
-//     { path: '/Logo_Square_Dark.png', alt: 'Slide 3' },
-//   ];
+  const items = [
+    { path: '/Logo_Dark.png', alt: 'Slide 1' },
+    { path: '/Logo.png', alt: 'Slide 2' },
+    { path: '/Logo_Square_Dark.png', alt: 'Slide 3' },
+  ];
   const totalItems = items.length;
 
   const updateCarousel = (newIndex) => {
