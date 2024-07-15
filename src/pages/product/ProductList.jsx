@@ -4,6 +4,7 @@ import { useProduct } from "../../providers/hooks";
 import { useEffect } from "react";
 import Loading from "./../Loading"; 
 import SearchField from "../../components/SearchField";
+import ResponsiveDisplayCard from "../../components/ResponsiveDisplayCard";
 // const products = [
 //     {
 //       id: 1,
@@ -33,15 +34,13 @@ import SearchField from "../../components/SearchField";
   }
  
     return (
-        <div className="m-auto justify-evenly px-4  sm:px-6 sm:py-24 lg:px-8">
-          <h1 className="text-2xl font-bold text-center tracking-tight uppercase dark:text-gray-dark text-gray-light justify-center">New Arrival</h1>
-          {/* <SearchField/> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {products.map((product) => (
-              <ProductItem key = {product.id} product = {product}/>
-            ))}
-          </div>
-        </div>
+   
+      <ResponsiveDisplayCard labelHeader={"Buy Now"}>
+        {products.map(product=>(
+            <ProductItem key={product.id} product={product}/>
+        ))}
+              
+      </ResponsiveDisplayCard>
  
     )
   }

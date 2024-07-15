@@ -3,9 +3,9 @@ import { useState } from 'react';
 const ImageCarousal = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const items = [
-    { path: '/Logo_Dark.png', alt: 'Slide 1' },
-    { path: '/Logo.png', alt: 'Slide 2' },
-    { path: '/Logo_Square_Dark.png', alt: 'Slide 3' },
+    { path: '/placeholder.png', alt: 'Slide 1' },
+    { path: '/placeholder.png', alt: 'Slide 2' },
+    { path: '/placeholder.png', alt: 'Slide 3' },
   ];
   const totalItems = items.length;
 
@@ -19,7 +19,9 @@ const ImageCarousal = () => {
   };
 
   return (
-    <div className="relative flex-none w-full max-w-md mx-auto overflow-hidden">
+    <>
+
+    <div className="align-middle relative w-sm max-w-md mx-auto overflow-hidden drop-shadow-sm">
       <div
         className="flex flex-none transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -32,17 +34,18 @@ const ImageCarousal = () => {
       </div>
       <button
         onClick={() => updateCarousel(currentIndex - 1)}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-700 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 md:p-4"
+        className="absolute left-0.5 top-1/3 transform -translate-y-1/2 p-2 bg-dark text-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 md:p-4"
       >
-        Prev
+        &lt;
       </button>
       <button
         onClick={() => updateCarousel(currentIndex + 1)}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-700 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 md:p-4"
+        className="absolute right-0.5 top-1/3 transform -translate-y-1/2 p-2 bg-dark text-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 md:p-4"
       >
-        Next
+        &gt;
       </button>
     </div>
+    </>
   );
 };
 

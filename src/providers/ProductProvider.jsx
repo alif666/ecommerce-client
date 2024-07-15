@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import { ProductContext } from "./hooks";
 import {useState} from "react";
-import { BASE_URL } from "./constant";
+import { BASE_URL, API_KEY } from "./constant";
+import { getProducts } from "./apiProducts";
 
 
 
@@ -46,16 +47,31 @@ export default function ProductProvider({ children }) {
 
 
 
-  async function fetchProducts(){
+  async function fetchProducts() {
     setIsLoading(true);
-    // const res = await fetch(`${BASE_URL}/api/product/fetch/all`);
-    const res = await fetch(`${BASE_URL}/products`);
-    const data = await res.json();
-    setProducts(data);
-    setIsLoading(false);
-
+  
+    try {
+      const res = await fetch(`${BASE_URL}/rest/v1/product?select=*`, {
+        headers: {
+          apikey: API_KEY,
+          Authorization: `Bearer ${API_KEY}`,
+        },
+      });
+  
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+  
+      const data = await res.json();
+      setProducts(data);
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+      // Handle the error appropriately in your UI
+    } finally {
+      setIsLoading(false);
+    }
   }
-
+  
   //POST PRODUCT TO REST
   async function submitProduct(formData){
     console.log('POST PRODUCT',formData);
