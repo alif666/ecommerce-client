@@ -5,31 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-  </head>
-  <body class="light">
-    <button id="theme-toggle" class="p-2 m-2 bg-gray-200 dark:bg-gray-800 text-black dark:text-white">
-      Toggle Theme
-    </button>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script>
-      const themeToggleBtn = document.getElementById('theme-toggle');
-      themeToggleBtn.addEventListener('click', () => {
-        const htmlElement = document.documentElement;
-        if (htmlElement.classList.contains('dark')) {
-          htmlElement.classList.remove('dark');
-          localStorage.setItem('theme', 'light');
-        } else {
-          htmlElement.classList.add('dark');
-          localStorage.setItem('theme', 'dark');
-        }
-      });
 
-      // On page load, set the theme based on localStorage
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-      }
-    </script>
+  </head>
+  <body>
+
+    <div id="root">
+
+
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
