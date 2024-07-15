@@ -1,0 +1,77 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "description": "High-quality wireless headphones with noise cancellation.",
+        "price": 199.99,
+        "quantity": 50,
+        "categoryId": 2,
+        "sellerId": 1,
+        "image1": "/Logo_Square_Dark.png",
+        "image2": "/Logo_Square_Dark.png",
+        "image3": "/Logo_Square_Dark.png"
+      },
+      {
+        "id": 2,
+        "name": "Gaming Laptop",
+        "description": "Powerful gaming laptop with the latest graphics card.",
+        "price": 1499.99,
+        "quantity": 20,
+        "categoryId": 1,
+        "sellerId": 2,
+        "image1": "/Logo_Square_Dark.png",
+        "image2": "/Logo_Square_Dark.png",
+        "image3": "/Logo_Square_Dark.png"
+      },
+      {
+        "id": 3,
+        "name": "Smartphone",
+        "description": "Latest model smartphone with high-resolution camera.",
+        "price": 799.99,
+        "quantity": 100,
+        "categoryId": 3,
+        "sellerId": 3,
+        "image1": "/Logo_Square_Dark.png",
+        "image2": "/Logo_Square_Dark.png",
+        "image3": "/Logo_Square_Dark.png"
+      },
+      {
+        "id": 4,
+        "name": "4K TV",
+        "description": "Ultra HD 4K television with smart features.",
+        "price": 999.99,
+        "quantity": 30,
+        "categoryId": 4,
+        "sellerId": 4,
+        "image1": "/Logo_Square_Dark.png",
+        "image2": "/Logo_Square_Dark.png",
+        "image3": "/Logo_Square_Dark.png"
+      },
+      {
+        "id": 5,
+        "name": "Bluetooth Speaker",
+        "description": "Portable Bluetooth speaker with powerful sound.",
+        "price": 49.99,
+        "quantity": 200,
+        "categoryId": 2,
+        "sellerId": 1,
+        "image1": "/Logo_Square_Dark.png",
+        "image2": "/Logo_Square_Dark.png",
+        "image3": "/Logo_Square_Dark.png"
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "emailId": "aliflodi@gmail.com",
+        "password": "password"
+      },
+      {
+        "id": 2,
+        "emailId": "nasir@gmail.com",
+        "password": "password"
+      }
+    ]
+  }
+  
